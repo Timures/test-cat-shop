@@ -1,5 +1,5 @@
 <template>
-    <button :id="id">
+    <button :categoryId="categoryId" @click="handleClick">
         {{ label }}
     </button>
 </template>
@@ -12,11 +12,17 @@ export default {
             type: String,
             default: 'Label'
         },
-        id: {
+        categoryId: {
             type: Number,
             default: null
         }
+    },
+    methods: {
+    handleClick() {
+      this.$emit('filter', this.categoryId);
+    //   console.log('click ', this.id); // Эмитировать событие при клике на кнопку
     }
+  }
 }
 </script>
 

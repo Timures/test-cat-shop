@@ -1,0 +1,123 @@
+[
+    {
+      "name": "Стейк из говядины",
+      "description": "Нежный стейк из высококачественной говядины, подается с соусом и гарниром",
+      "price": 650,
+      "weight": 300,
+      "IsInBasket": false,
+      "IsFavorite": true,
+      "value": 0,
+      "categoryId": 6
+    },
+    {
+      "name": "Курица по-французски",
+      "description": "Куриное филе в сливочном соусе с грибами и сыром, подается с картофелем",
+      "price": 550,
+      "weight": 400,
+      "IsInBasket": false,
+      "IsFavorite": false,
+      "value": 0,
+      "categoryId": 6
+    },
+    {
+      "name": "Лазанья",
+      "description": "Паста, фарш, помидоры, сыр, соус бешамель",
+      "price": 450,
+      "weight": 350,
+      "IsInBasket": false,
+      "IsFavorite": false,
+      "value": 0,
+      "categoryId": 6
+    },
+    {
+      "name": "Утка по-пекински",
+      "description": "Пекинская утка с хрустящей кожей и соусом хойсин, подается с овощами",
+      "price": 700,
+      "weight": 450,
+      "IsInBasket": false,
+      "IsFavorite": true,
+      "value": 0,
+      "categoryId": 6
+    },
+    {
+      "name": "Омлет с овощами",
+      "description": "Яичный омлет с томатами, перцем, луком, зеленью",
+      "price": 320,
+      "weight": 250,
+      "IsInBasket": false,
+      "IsFavorite": false,
+      "value": 0,
+      "categoryId": 6
+    },
+    {
+      "name": "Паста с морепродуктами",
+      "description": "Паста с креветками, мидиями, осьминогом, соусом из томатов",
+      "price": 580,
+      "weight": 400,
+      "IsInBasket": false,
+      "IsFavorite": true,
+      "value": 0,
+      "categoryId": 6
+    },
+    {
+      "name": "Картофель фри",
+      "description": "Хрустящий жареный картофель, подается с соусом",
+      "price": 180,
+      "weight": 200,
+      "IsInBasket": false,
+      "IsFavorite": false,
+      "value": 0,
+      "categoryId": 6
+    },
+    {
+      "name": "Карри с креветками",
+      "description": "Креветки в карри соусе с овощами, подается с рисом",
+      "price": 600,
+      "weight": 400,
+      "IsInBasket": false,
+      "IsFavorite": true,
+      "value": 0,
+      "categoryId": 6
+    },
+    {
+      "name": "Борщ",
+      "description": "Традиционный русский суп с мясом, свеклой, капустой, картофелем",
+      "price": 280,
+      "weight": 350,
+      "IsInBasket": false,
+      "IsFavorite": false,
+      "value": 0,
+      "categoryId": 6
+    },
+    {
+      "name": "Форель на гриле",
+      "description": "Свежая форель, запеченная на гриле, подается с зеленью и лимоном",
+      "price": 480,
+      "weight": 350,
+      "IsInBasket": false,
+      "IsFavorite": false,
+      "value": 0,
+      "categoryId": 6
+    },
+    {
+      "name": "Картофельные дольки с сыром",
+      "description": "Картофель, запеченный с сыром и зеленью",
+      "price": 220,
+      "weight": 200,
+      "IsInBasket": false,
+      "IsFavorite": true,
+      "value": 0,
+      "categoryId": 6
+    },
+    {
+      "name": "Рататуй",
+      "description": "Французское овощное блюдо с баклажанами, кабачками, помидорами, луком",
+      "price": 350,
+      "weight": 300,
+      "IsInBasket": false,
+      "IsFavorite": false,
+      "value": 0,
+      "categoryId": 6
+    }
+  ]
+  

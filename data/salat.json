@@ -1,0 +1,123 @@
+[
+    {
+      "name": "Салат Цезарь",
+      "description": "Листья салата, куриное филе, сухарики, пармезан, соус Цезарь",
+      "price": 350,
+      "weight": 300,
+      "IsInBasket": false,
+      "IsFavorite": true,
+      "value": 0,
+      "categoryId": 5
+    },
+    {
+      "name": "Греческий салат",
+      "description": "Листья салата, оливки, томаты, огурцы, брынза, маслины",
+      "price": 300,
+      "weight": 250,
+      "IsInBasket": false,
+      "IsFavorite": false,
+      "value": 0,
+      "categoryId": 5
+    },
+    {
+      "name": "Салат Нисуаз",
+      "description": "Тунец, яйца, зеленые бобы, оливки, огурцы, помидоры",
+      "price": 400,
+      "weight": 350,
+      "IsInBasket": false,
+      "IsFavorite": false,
+      "value": 0,
+      "categoryId": 5
+    },
+    {
+      "name": "Салат с морепродуктами",
+      "description": "Креветки, мидии, осьминог, огурцы, помидоры, зелень",
+      "price": 450,
+      "weight": 400,
+      "IsInBasket": false,
+      "IsFavorite": true,
+      "value": 0,
+      "categoryId": 5
+    },
+    {
+      "name": "Овощной салат",
+      "description": "Свежие овощи по сезону, заправка на выбор",
+      "price": 250,
+      "weight": 200,
+      "IsInBasket": false,
+      "IsFavorite": false,
+      "value": 0,
+      "categoryId": 5
+    },
+    {
+      "name": "Салат Чукка",
+      "description": "Листья салата, помидоры черри, моцарелла, базилик, оливковое масло",
+      "price": 280,
+      "weight": 220,
+      "IsInBasket": false,
+      "IsFavorite": true,
+      "value": 0,
+      "categoryId": 5
+    },
+    {
+      "name": "Салат с авокадо",
+      "description": "Листья салата, авокадо, огурцы, помидоры, перец, заправка",
+      "price": 320,
+      "weight": 270,
+      "IsInBasket": false,
+      "IsFavorite": false,
+      "value": 0,
+      "categoryId": 5
+    },
+    {
+      "name": "Фруктовый салат",
+      "description": "Свежие фрукты по сезону, сироп, орехи",
+      "price": 280,
+      "weight": 250,
+      "IsInBasket": false,
+      "IsFavorite": true,
+      "value": 0,
+      "categoryId": 5
+    },
+    {
+      "name": "Салат Коул Слоу",
+      "description": "Капуста, морковь, майонезный соус, специи",
+      "price": 200,
+      "weight": 180,
+      "IsInBasket": false,
+      "IsFavorite": false,
+      "value": 0,
+      "categoryId": 5
+    },
+    {
+      "name": "Салат с курицей и ананасом",
+      "description": "Куриное филе, ананас, листья салата, заправка на выбор",
+      "price": 380,
+      "weight": 320,
+      "IsInBasket": false,
+      "IsFavorite": true,
+      "value": 0,
+      "categoryId": 5
+    },
+    {
+      "name": "Салат с рукколой и пармезаном",
+      "description": "Руккола, пармезан, помидоры черри, оливковое масло",
+      "price": 350,
+      "weight": 300,
+      "IsInBasket": false,
+      "IsFavorite": false,
+      "value": 0,
+      "categoryId": 5
+    },
+    {
+      "name": "Салат с мясом и грибами",
+      "description": "Говядина, шампиньоны, листья салата, соус",
+      "price": 420,
+      "weight": 380,
+      "IsInBasket": false,
+      "IsFavorite": true,
+      "value": 0,
+      "categoryId": 5
+    }
+  ]
+  

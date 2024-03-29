@@ -1,0 +1,123 @@
+[
+    {
+      "name": "Гункан с лососем",
+      "description": "Лосось, рис, нори",
+      "price": 180,
+      "weight": 150,
+      "IsInBasket": false,
+      "IsFavorite": true,
+      "value": 0,
+      "categoryId": 2
+    },
+    {
+      "name": "Гункан с креветкой",
+      "description": "Креветка, рис, нори",
+      "price": 160,
+      "weight": 140,
+      "IsInBasket": false,
+      "IsFavorite": false,
+      "value": 0,
+      "categoryId": 2
+    },
+    {
+      "name": "Гункан с икрой",
+      "description": "Икра, рис, нори",
+      "price": 200,
+      "weight": 160,
+      "IsInBasket": false,
+      "IsFavorite": false,
+      "value": 0,
+      "categoryId": 2
+    },
+    {
+      "name": "Гункан с угрем",
+      "description": "Угорь, рис, нори",
+      "price": 220,
+      "weight": 170,
+      "IsInBasket": false,
+      "IsFavorite": true,
+      "value": 0,
+      "categoryId": 2
+    },
+    {
+      "name": "Гункан с тунцом",
+      "description": "Тунец, рис, нори",
+      "price": 190,
+      "weight": 160,
+      "IsInBasket": false,
+      "IsFavorite": false,
+      "value": 0,
+      "categoryId": 2
+    },
+    {
+      "name": "Гункан с мидиями",
+      "description": "Мидии, рис, нори",
+      "price": 210,
+      "weight": 170,
+      "IsInBasket": false,
+      "IsFavorite": false,
+      "value": 0,
+      "categoryId": 2
+    },
+    {
+      "name": "Гункан с крабом",
+      "description": "Краб, рис, нори",
+      "price": 170,
+      "weight": 140,
+      "IsInBasket": false,
+      "IsFavorite": true,
+      "value": 0,
+      "categoryId": 2
+    },
+    {
+      "name": "Гункан с омлетом",
+      "description": "Яичный омлет, рис, нори",
+      "price": 150,
+      "weight": 130,
+      "IsInBasket": false,
+      "IsFavorite": false,
+      "value": 0,
+      "categoryId": 2
+    },
+    {
+      "name": "Гункан с осетриной",
+      "description": "Осетрина, рис, нори",
+      "price": 230,
+      "weight": 180,
+      "IsInBasket": false,
+      "IsFavorite": true,
+      "value": 0,
+      "categoryId": 2
+    },
+    {
+      "name": "Гункан с кальмаром",
+      "description": "Кальмар, рис, нори",
+      "price": 200,
+      "weight": 160,
+      "IsInBasket": false,
+      "IsFavorite": false,
+      "value": 0,
+      "categoryId": 2
+    },
+    {
+      "name": "Гункан с раковыми палочками",
+      "description": "Раковые палочки, рис, нори",
+      "price": 180,
+      "weight": 150,
+      "IsInBasket": false,
+      "IsFavorite": false,
+      "value": 0,
+      "categoryId": 2
+    },
+    {
+      "name": "Гункан с копченым лососем",
+      "description": "Копченый лосось, рис, нори",
+      "price": 220,
+      "weight": 170,
+      "IsInBasket": false,
+      "IsFavorite": true,
+      "value": 0,
+      "categoryId": 2
+    }
+  ]
+  
