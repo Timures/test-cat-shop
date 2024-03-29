@@ -1,12 +1,16 @@
 <template>
   <section>
-    <h1>main</h1>
+    <MainTitle :text="'Меню'" />
   </section>
 </template>
 
 <script>
+import MainTitle from '@/components/Common/MainTitle.vue'
 export default {
   name: 'IndexPage',
-  layout: 'MainLayout'
+  layout: 'MainLayout',
+  components: {
+    MainTitle
+  }
 }
 </script>
