@@ -182,8 +182,22 @@ export default {
         text-decoration: none;
     }
 
+    
+    @media screen and (max-width: 1170px) {
+        a {
+            span.nav-phone__text {
+                display: none;
+            }
+        }
+    }
+
     @media screen and (max-width: 980px) {
         grid-column: 2/3;
+        a {
+            span.nav-phone__text {
+                display: inline-block;
+            }
+        }
     }
 
     @media screen and (max-width: 768px) {

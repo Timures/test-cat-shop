@@ -2,29 +2,23 @@
     <div>
       <!-- Кнопки категорий блюд -->
       <div class="categories">
-        <TabsButton v-for="category in categories" :key="category.id" :label="category.title" :categoryId="category.id" @filter="filterDishes" />
+        <TabsButton v-for="category in categories" :key="category.id" :label="category.title" :selectedCategoryId="selectedCategory" :categoryId="category.id" @filter="filterDishes" />
       </div>
   
       <!-- Вывод блюд по выбранной категории -->
       <div class="dishes">
-        <div v-for="dish in filteredDishes" :key="dish.id">
-          <h3>{{ dish.name }}</h3>
-          <p>{{ dish.description }}</p>
-          <p>Цена: {{ dish.price }}</p>
-          <p>Вес: {{ dish.weight }}</p>
-          <!-- Другие свойства блюда, если необходимо -->
-        </div>
+        <FoodCard v-for="dish in filteredDishes" :key="dish.id" :food="dish" @addToCart="addToCart" />
       </div>
     </div>
   </template>
   
   <script>
+  import { mapMutations } from 'vuex';
   import TabsButton from '@/components/Menu/TabsButton'
-  import dishesData from '@/data/dishes.json'; // Путь к вашему JSON файлу с данными о блюдах
-  
+  import FoodCard from '@/components/Menu/FoodCard.vue'
   export default {
     name: 'MainMenu',
-    components: { TabsButton },
+    components: { TabsButton, FoodCard },
     data() {
       return {
         categories: [
@@ -35,36 +29,46 @@
             {id: 5, title: 'салаты'},
             {id: 6, title: 'ГОрячие блюда'}
         ],
-        dishes: dishesData, // Данные о блюдах из JSON
         selectedCategory: 3 // Выбранная категория по умолчанию
       };
     },
     computed: {
       filteredDishes() {
         // Фильтрация блюд по выбранной категории
-        return this.dishes.filter(dish => dish.categoryId === this.selectedCategory);
+        return this.$store.state.dishes.filter(dish => dish.categoryId === this.selectedCategory);
       }
     },
     methods: {
+      ...mapMutations(['addToCart']), // Используем mapMutations для добавления блюда в корзину
+
+      addToCart(dish) {
+      this.$store.commit('addToCart', dish); // Вызываем мутацию для добавления блюда в корзину
+    },
       filterDishes(categoryID) {
-        console.log('filter ', categoryID);
-        // Установка выбранной категории
         this.selectedCategory = categoryID;
-      }
+      },
     }
   };
   </script>
   
-  <style>
+  <style lang="scss">
   .categories {
     display: flex;
-    justify-content: space-around;
-    margin-bottom: 20px;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 50px;
+    @media screen and (max-width: 767px) {
+      flex-wrap: wrap;
+    }
   }
   .dishes {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 20px;
+    margin-top: 60px;
+    justify-content: center;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+
+    
   }
   </style>
   

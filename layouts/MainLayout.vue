@@ -20,12 +20,12 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import '@/assets/scss/base.scss';
 
 main.main-content {
     background-image: url('/images/bg.png');
     background-repeat: no-repeat;
     background-size: cover;
+    background-color: #fff;
     padding-top: 100px;
     padding-bottom: 120px;
 
