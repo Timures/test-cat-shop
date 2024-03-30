@@ -53,32 +53,52 @@ export default {
 </script>
 
 <style lang="scss">
-    .food-counter {
+.food-counter {
+    display: flex;
+    justify-content: center;
+    align-items: end;
+
+    &.small {
+        button {
+            background: #312525;
+            width: 25px;
+            height: 25px;
+            span.icon {
+                svg {
+                    path {
+                        stroke: #fff;
+                    }
+                }
+            }
+        }
+        .food-counter__value {
+            margin: 0 7px;
+font-size: 16px;
+color: #353535;
+        }
+    }
+
+    button {
+        cursor: pointer;
+        border-radius: 60px;
+        padding: 7px;
+        width: 30px;
+        height: 30px;
+        background: #fff;
+        box-shadow: none;
+        border: none;
         display: flex;
         justify-content: center;
         align-items: center;
-
-        button {
-            border-radius: 60px;
-padding: 7px;
-width: 30px;
-height: 30px;
-background: #fff;
-box-shadow: none;
-border: none;
-display: flex;
-justify-content: center;
-align-items: center;
-
-        }
-
-        &__value {
-            margin: 0 13px;
-            font-family: 'Neucha', cursive;
-            font-weight: 400;
-font-size: 19px;
-letter-spacing: 0.05em;
-color: #fff;
-        }
     }
+
+    &__value {
+        margin: 0 13px;
+        font-family: 'Neucha', cursive;
+        font-weight: 400;
+        font-size: 19px;
+        letter-spacing: 0.05em;
+        color: #fff;
+    }
+}
 </style>

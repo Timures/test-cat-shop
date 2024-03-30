@@ -34,7 +34,7 @@
             <nav class="nav-actions">
                 <ul>
                     <li>
-                        <button class="icon">
+                        <button class="icon" @click="handleToggleBasket">
                             <span class="icon">
                                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
@@ -59,6 +59,7 @@
 </template>
 
 <script>
+import { mapGetters, mapActions } from 'vuex';
 import SideMenu from './SideMenu.vue';
 import Logo from './Logo.vue'
 export default {
@@ -66,9 +67,17 @@ export default {
     components: {
         SideMenu, Logo
     },
-    data() {
-        return {
-
+    computed:{
+        ...mapGetters(['getShowBasket'])
+    },
+    methods: {
+        ...mapActions(['showBasket']),
+        handleToggleBasket(){           
+            this.showBasket(!this.getShowBasket)
+            if(this.getShowBasket){
+                const body = document.querySelector('body');
+            body.classList.add('no-scroll');
+            }
         }
     }
 }

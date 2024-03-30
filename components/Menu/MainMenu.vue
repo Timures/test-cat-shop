@@ -7,13 +7,13 @@
   
       <!-- Вывод блюд по выбранной категории -->
       <div class="dishes">
-        <FoodCard v-for="dish in filteredDishes" :key="dish.id" :food="dish" @addToCart="addToCart" />
+        <FoodCard v-for="dish in getFilteredDishes" :key="dish.id" :food="dish" @addToCart="addToCart" />
       </div>
     </div>
   </template>
   
   <script>
-  import { mapMutations } from 'vuex';
+  import { mapGetters, mapActions } from 'vuex';
   import TabsButton from '@/components/Menu/TabsButton'
   import FoodCard from '@/components/Menu/FoodCard.vue'
   export default {
@@ -33,16 +33,16 @@
       };
     },
     computed: {
-      filteredDishes() {
-        // Фильтрация блюд по выбранной категории
-        return this.$store.state.dishes.filter(dish => dish.categoryId === this.selectedCategory);
+      ...mapGetters(['getDishesByCategory']),
+      getFilteredDishes() {
+        return this.getDishesByCategory(this.selectedCategory);
       }
     },
     methods: {
-      ...mapMutations(['addToCart']), // Используем mapMutations для добавления блюда в корзину
+      ...mapActions(['addToCart']), // Используем mapMutations для добавления блюда в корзину
 
       addToCart(dish) {
-      this.$store.commit('addToCart', dish); // Вызываем мутацию для добавления блюда в корзину
+      this.addToCart(dish); // Вызываем мутацию для добавления блюда в корзину
     },
       filterDishes(categoryID) {
         this.selectedCategory = categoryID;
