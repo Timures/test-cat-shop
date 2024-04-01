@@ -17,7 +17,15 @@ export default {
 .title-wrapper {
     width: 100%;
     justify-content: center;
-    display: flex;
+    display: flex; 
+    &.small {
+        h1.title {
+            font-size: 32px;
+color: #191919;
+line-height: 1;
+text-transform: inherit;
+        }
+    }
 }
 h1.title {
     font-family: "Neucha", cursive;

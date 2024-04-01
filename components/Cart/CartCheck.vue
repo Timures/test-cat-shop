@@ -1,7 +1,7 @@
 <template>
-    <section class="cart">
+    <div class="cart-check">
         <MainTitle :text="'Корзина'" />
-        <p>{{ getBasketItems.length }}</p>
+    
         <div class="cart-list">
             <CartItem v-for="item in getBasketItems" :key="item.id" :food="item" />
         </div>
@@ -15,18 +15,19 @@
             </div>
             <div class="cart-actions">
                 <button class="close" @click="handleCloseCart">Вернуться к покупкам</button>
-                <button class="order">Оформить заказ</button>
+                <button class="order" @click="handleOrder">Оформить заказ</button>
             </div>
         </footer>
-    </section>
+    </div>
 </template>
 
 <script>
 import { mapGetters, mapActions } from 'vuex'
 import MainTitle from '@/components/Common/MainTitle.vue'
-import CartItem from '@/components/Menu/CartItem.vue'
+import CartItem from '@/components/Cart/CartItem.vue'
+
 export default {
-    name: 'MainCart',
+    name: 'CartCheck',
     components: { MainTitle, CartItem },
     computed: {
         ...mapGetters(['getBasketItems', 'getCartTotalPrice'])
@@ -35,20 +36,27 @@ export default {
     ...mapActions(['showBasket']),
     handleCloseCart() {
       this.showBasket(false)
+    },
+    handleOrder(){
+        this.$emit('order');
     }
   }
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .cart {
-    display: flex;
+    
+    &-check {
+        display: flex;
     flex-direction: column;
     align-items: center;
     height: 100%;
     padding: 20px 20px 25px 25px;
+    }
 
     &-list {
+        margin-top: 30px;
         display: flex;
         flex-direction: column;
         gap: 5px;

@@ -62,8 +62,8 @@
 
 <script>
 import { mapActions } from 'vuex';
-import FoodFavorite from './FoodFavorite.vue';
-import FoodCounter from './FoodCounter.vue'
+import FoodFavorite from '@/components/Menu/FoodFavorite.vue';
+import FoodCounter from '@/components/Menu/FoodCounter.vue'
 export default {
     name: 'CartItem',
     props: {

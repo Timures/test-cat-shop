@@ -13,7 +13,7 @@ import { mapGetters, mapActions } from 'vuex';
 import MainTitle from '@/components/Common/MainTitle.vue'
 import MainMenu from '@/components/Menu/MainMenu.vue'
 import Modal from '@/components/Common/Modal'
-import MainCart from '@/components/Menu/MainCart.vue'
+import MainCart from '@/components/Cart/MainCart.vue'
 export default {
   name: 'IndexPage',
   layout: 'MainLayout',
