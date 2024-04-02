@@ -67,6 +67,10 @@ export default {
     flex-direction: column;
     transition: 0.3s ease-in-out all;
 
+    @media screen and (max-width: 767px) {
+        width: 100%;
+    }
+
     &.active {
         background: #312525;
         color: #fff;

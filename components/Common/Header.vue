@@ -4,7 +4,7 @@
             <div class="nav-logo">
                 <SideMenu />
 
-            <Logo />
+                <Logo />
             </div>
 
             <nav class="nav-links">
@@ -67,16 +67,16 @@ export default {
     components: {
         SideMenu, Logo
     },
-    computed:{
+    computed: {
         ...mapGetters(['getShowBasket'])
     },
     methods: {
         ...mapActions(['showBasket']),
-        handleToggleBasket(){           
+        handleToggleBasket() {
             this.showBasket(!this.getShowBasket)
-            if(this.getShowBasket){
+            if (this.getShowBasket) {
                 const body = document.querySelector('body');
-            body.classList.add('no-scroll');
+                body.classList.add('no-scroll');
             }
         }
     }
@@ -105,11 +105,13 @@ export default {
         }
     }
 }
+
 .nav-logo {
     @media screen and (max-width: 980px) {
         display: flex;
         grid-column: 1/2;
     }
+
     @media screen and (max-width: 768px) {
         width: 100%;
         grid-column: 1/3;
@@ -119,9 +121,11 @@ export default {
 
 .nav-links {
     display: block;
+
     @media screen and (max-width: 980px) {
         display: none;
     }
+
     ul {
         padding: 0;
         margin: 0;
@@ -191,7 +195,7 @@ export default {
         text-decoration: none;
     }
 
-    
+
     @media screen and (max-width: 1170px) {
         a {
             span.nav-phone__text {
@@ -202,6 +206,7 @@ export default {
 
     @media screen and (max-width: 980px) {
         grid-column: 2/3;
+
         a {
             span.nav-phone__text {
                 display: inline-block;
@@ -211,6 +216,7 @@ export default {
 
     @media screen and (max-width: 768px) {
         grid-column: 3/4;
+
         a {
             span.nav-phone__text {
                 display: none;
@@ -222,10 +228,12 @@ export default {
 
 .nav-actions {
     display: block;
+
     @media screen and (max-width: 980px) {
         grid-column: 3/4;
-        
+
     }
+
     @media screen and (max-width: 768px) {
         display: none;
     }

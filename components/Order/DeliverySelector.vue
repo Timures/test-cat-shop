@@ -100,6 +100,10 @@ export default {
     img {
       width: 30px;
     }
+
+    @media screen and (max-width: 767px) {
+    display: none;
+  }
   }
 
   .delivery-text {
@@ -109,6 +113,10 @@ export default {
     color: #222;
     text-align: left;
     width: 40%;
+    @media screen and (max-width: 767px) {
+      width: 50%;
+    padding-left: 16px;
+  }
   }
 
   .delivery-info {

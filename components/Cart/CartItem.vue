@@ -133,15 +133,27 @@ export default {
     width: 100%;
     max-width: 528px;
 
+    @media screen and (max-width: 767px) {
+        flex-direction: column;
+    }
+
     &__main {
         display: flex;
         gap: 24px;
+        @media screen and (max-width: 767px) {
+            flex-direction: column;
+            width: 100%;
+        }
     }
 
     &__actions {
         display: flex;
         gap: 23px;
         align-items: center;
+        @media screen and (max-width: 767px) {
+            justify-content: space-between;
+            width: 100%;
+        }
     }
 
     &__img {
@@ -155,6 +167,9 @@ export default {
         max-width: 211px;
         position: relative;
         flex-grow: 1;
+        @media screen and (max-width: 767px) {
+            max-width: 90%;
+        }
 
         h3 {
             font-family: 'Neucha', cursive;
@@ -192,6 +207,10 @@ export default {
         display: flex;
         flex-direction: column;
         gap: 10px;
+        @media screen and (max-width: 767px) {
+            flex-direction: row;
+            gap: 16px;
+        }
     }
 
     &__price, &__total {

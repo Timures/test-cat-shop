@@ -36,6 +36,10 @@
     top: -19px;
     left: 0;
 
+    @media screen and (min-width: 981px) {
+        left: 70px;
+    }
+
     img {
         width: 56px;
         height: 67px;
@@ -53,6 +57,8 @@
             display: none;
         }
     }
+
+    
 
     @media screen and (max-width: 980px) {
         flex-direction: row;

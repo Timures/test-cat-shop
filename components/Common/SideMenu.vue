@@ -14,7 +14,7 @@
                         <li class="sidemenu__item"><a href="">Акции</a></li>
                         <li class="sidemenu__item"><a href="">Контакты</a></li>
                         <li class="sidemenu__item">
-                            <button class="icon">
+                            <button class="icon" @click="handleToggleBasket">
                                 <span class="icon">
                                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
@@ -40,6 +40,8 @@
 </template>
 
 <script>
+import { mapGetters, mapActions } from 'vuex';
+
 export default {
     name: 'SideMenu',
     data() {
@@ -47,10 +49,17 @@ export default {
             navOpen: false
         }
     },
+    computed: {
+        ...mapGetters(['getShowBasket'])
+    },
     methods: {
+        ...mapActions(['showBasket']),
         toggleMenu() {
             this.navOpen = !this.navOpen;
             this.toggleBodyScroll(); // Вызываем метод для блокировки прокрутки
+            // if(this.getShowBasket){
+            //     this.handleToggleBasket()
+            // }
         },
         closeMenu() {
             this.navOpen = false;
@@ -59,6 +68,19 @@ export default {
         toggleBodyScroll() {
             const body = document.querySelector('body');
             body.classList.toggle('no-scroll');
+        },
+        handleToggleBasket() {
+            if(this.navOpen){
+                this.toggleMenu()
+            }
+            
+            this.showBasket(!this.getShowBasket)
+            
+            if (this.getShowBasket) {
+                const body = document.querySelector('body');
+                body.classList.add('no-scroll');
+            }
+            
         }
     }
 }
@@ -72,14 +94,20 @@ export default {
         display: block;
     }
 
+    @media screen and (max-width: 767px) {
+        z-index: 7;;
+    }
+    
+
     nav {
         width: 100%;
         // height: calc(100% - #{$headerHeight} - #{$footerHeight});
-        background: transparent;
+        background: #062D4E;
         position: fixed;
         top: 67px;
         left: 0;
-        z-index: 99;
+        z-index: 4;
+        height: calc(100% - 67px);
         // box-shadow: 2px 0 3px$grey-6;
         // overflow-y: scroll;
     }
@@ -92,7 +120,7 @@ export default {
             background: transparent;
             border: none;
             position: relative;
-            z-index: 100;
+            z-index: 4;
             appearance: none;
             cursor: pointer;
             outline: none;
@@ -134,6 +162,10 @@ export default {
                 }
             }
 
+            @media screen and (max-width: 767px) {
+                z-index: 20;
+            }
+
         }
 
         &__wrapper {
@@ -149,6 +181,20 @@ export default {
         }
 
         &__item {
+            button {
+                text-decoration: none;
+                line-height: 1.6em;
+                font-size: 1.6em;
+                padding: .5em;
+                display: block;
+                color: white;
+                transition: .4s ease;
+                background: transparent;
+                border: none;
+                span.icon {
+                    svg { path { fill: #fff }}
+                }
+            }
             a {
                 text-decoration: none;
                 line-height: 1.6em;

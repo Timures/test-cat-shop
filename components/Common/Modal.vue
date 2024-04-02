@@ -32,7 +32,7 @@ export default {
 };
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 /* Стили для модального окна */
 .modal-wrapper {
   position: fixed;
@@ -42,6 +42,15 @@ export default {
   height: 100%;
   display: grid;
   grid-template-columns: 2fr minmax(613px, 1fr);
+  z-index: 5;
+  @media screen and (max-width: 767px) {
+    top: 67px;
+    grid-template-columns: auto;
+    z-index: 5;
+    overflow: auto;
+    height: 100%;
+    max-height: calc(100% - 67px);
+  }
 }
 
 .modal-overlay {
@@ -55,6 +64,9 @@ export default {
   backdrop-filter: blur(5px);
   /* Заблюривание фона */
   grid-column: 1/2;
+  @media screen and (max-width: 767px) {
+    display: none;     
+  }
 }
 
 .modal-content {
@@ -66,6 +78,10 @@ export default {
   position: relative;
   z-index: 20;
   grid-column: 2/3;
+  @media screen and (max-width: 767px) {
+    grid-column: 1/2;  
+    z-index: 3; 
+  }
 }
 
 .no-scroll {
