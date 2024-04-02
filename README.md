@@ -1,4 +1,6 @@
 # test-cat-shop
+![image](https://github.com/Timures/test-cat-shop/assets/2026685/d330df7a-0da1-42d8-bc85-95bfbf1b1104)
+Made at 5 day
 
 ## Build Setup
 
